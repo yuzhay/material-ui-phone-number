@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
-import RootRef from '@material-ui/core/RootRef';
+//import RootRef from '@material-ui/core/RootRef';
 
 class Item extends React.PureComponent {
   render() {
@@ -26,8 +26,8 @@ class Item extends React.PureComponent {
     }
 
     return (
-      <RootRef rootRef={(node) => itemRef(node)}>
-        <MenuItem
+      //<RootRef rootRef={(node) => itemRef(node)}>
+        <MenuItem ref={(node) => itemRef(node)}
           className="country"
           data-dial-code="1"
           data-country-code={iso2}
@@ -41,7 +41,7 @@ class Item extends React.PureComponent {
 
           <span className="dial-code">{`+${dialCode}`}</span>
         </MenuItem>
-      </RootRef>
+      //</RootRef>
     );
   }
 }
